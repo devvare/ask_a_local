@@ -1,0 +1,629 @@
+/* Basic Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Light background */
+}
+
+/* --- Colors --- */
+:root {
+    --primary-color: #00BFA5; /* Turquoise */
+    --secondary-color: #FFC107; /* Yellow */
+    --white-color: #ffffff;
+    --dark-grey: #333;
+    --light-grey: #f0f0f0;
+    --whatsapp-green: #25D366;
+}
+
+/* --- Utility Classes --- */
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--dark-grey);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #e0a800; /* Darker yellow */
+}
+
+/* --- Header / Hero Section --- */
+.hero-section {
+    /* background-color: var(--primary-color); */ /* Keep color as fallback */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('marmaris-bg.webp') no-repeat center center/cover; /* Add image and overlay */
+    color: var(--white-color);
+    padding: 80px 20px; /* Slightly increased padding */
+    text-align: center;
+    min-height: 60vh; /* Ensure hero takes significant height */
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* --- How It Works Section --- */
+.how-it-works {
+    padding: 40px 20px;
+    background-color: var(--white-color);
+    text-align: center;
+}
+
+.how-it-works h2 {
+    margin-bottom: 30px;
+    color: var(--dark-grey);
+    font-size: 2.2em; /* Match heading size with experts section */
+}
+
+.how-it-works ul {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.how-it-works li {
+    margin-bottom: 20px; /* More space between items */
+    font-size: 1.2em; /* Larger text */
+    display: flex;
+    align-items: center;
+}
+
+.how-it-works li i {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 1.5em; /* Larger icons */
+}
+
+/* --- Local Experts Section --- */
+.experts-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Lighter background */
+}
+
+.experts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Always 2 columns by default */
+    gap: 15px; /* Reduced gap for small screens */
+    max-width: 800px; /* Limit maximum width for 2 columns */
+    margin: 0 auto; /* Center the grid */
+    padding: 0 5px; /* Add small padding */
+}
+
+.expert-card {
+    background-color: #ffffff; /* White background */
+    border-radius: 12px; /* Rounder corners */
+    padding: 0; /* Remove padding to fit header */
+    text-align: left; /* Left align text */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    margin-bottom: 15px;
+    width: 100%; /* Ensure card takes full width of grid cell */
+    min-width: 130px; /* Minimum width for very small screens */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    height: 100%; /* Make all cards take full height of grid cell */
+}
+
+.card-content {
+    display: flex;
+    padding: 0; /* Remove padding */
+    background-color: #e0f7fa; /* Light blue background as in image */
+    height: 150px; /* Fixed height for content */
+    flex: 1; /* Take remaining space */
+    border-top-left-radius: 12px; /* Add border radius to top corners */
+    border-top-right-radius: 12px;
+}
+
+.profile-image {
+    flex: 0 0 40%; /* Take up 40% of the width */
+    padding: 0; /* Remove padding */
+    background-color: #ffffff; /* White background */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow: hidden; /* Hide overflow */
+}
+
+.expert-card .avatar {
+    width: 90%; /* Not full width to create margin */
+    height: 90%; /* Not full height to create margin */
+    object-fit: cover; /* Ensures image covers the area */
+    display: block; /* Remove any extra space */
+    max-height: 150px; /* Limit maximum height */
+    border: 2px solid white; /* Add white border */
+    border-radius: 8px; /* Add rounded corners to images */
+}
+
+.profile-info {
+    flex: 0 0 60%; /* Take up 60% of the width */
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* White background */
+    padding: 10px;
+    text-align: center; /* Center text */
+    justify-content: center; /* Center content vertically */
+}
+
+.expert-card h3 {
+    margin-bottom: 5px;
+    color: #333; /* Darker text for name */
+    font-size: 1.1em;
+    background-color: #b2dfdb; /* Light teal background for name as in image */
+    padding: 3px 8px;
+    display: inline-block;
+    margin-top: 0;
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+.expert-card p {
+    font-size: 0.85em; /* Smaller text for small screens */
+    color: #555;
+    margin-bottom: 3px; /* Reduced margin between paragraphs */
+    line-height: 1.3;
+    text-align: center; /* Center text */
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4db6ac; /* Teal color as in image */
+    color: var(--white-color);
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px; /* Add border radius */
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 90%; /* Not full width to create margin */
+    margin: 10px auto; /* Add margin and center */
+    font-size: 0.9em;
+}
+
+.whatsapp-button i {
+    margin-right: 8px;
+}
+
+.whatsapp-button:hover {
+    background-color: #00897b; /* Darker teal on hover */
+}
+
+/* --- About Us Section (Home Page) --- */
+.about-us-section {
+    padding: 40px 20px;
+    background-color: var(--white-color);
+    text-align: center;
+}
+
+.about-us-section h2 {
+    margin-bottom: 20px;
+    color: var(--dark-grey);
+    font-size: 2.2em;
+}
+
+.about-preview {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.about-preview p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.05em;
+}
+
+.about-preview .cta-button {
+    margin-top: 10px;
+}
+
+/* --- About Page Styles --- */
+.about-hero {
+    min-height: 40vh; /* Shorter hero for about page */
+}
+
+.about-content {
+    padding: 40px 20px;
+    background-color: var(--white-color);
+}
+
+.about-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    font-size: 2em;
+}
+
+.about-content h3 {
+    margin: 25px 0 10px;
+    color: var(--dark-grey);
+    font-size: 1.5em;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.about-intro {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--dark-grey);
+}
+
+.about-highlight {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.about-cta {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 30px 0;
+}
+
+.about-content .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* --- Buy Me a Coffee Section --- */
+.support-section {
+    padding: 30px 20px;
+    background-color: #fff8e1; /* Light warm background */
+    text-align: center;
+    border-top: 1px solid #ffe0b2;
+    border-bottom: 1px solid #ffe0b2;
+}
+
+.support-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.support-section h3 {
+    font-size: 1.5em;
+    color: #795548; /* Coffee brown color */
+    margin-bottom: 10px;
+}
+
+.support-section h3 i {
+    margin-right: 8px;
+}
+
+.support-section p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    color: #5d4037;
+}
+
+.coffee-button {
+    display: inline-block;
+    background-color: #ff9800; /* Orange */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.coffee-button:hover {
+    background-color: #f57c00; /* Darker orange */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.coffee-button i {
+    margin-right: 8px;
+}
+
+/* --- Responsive Design --- */
+/* Tablet and smaller desktop screens */
+@media (max-width: 768px) {
+    .experts-grid {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns */
+        gap: 10px;
+    }
+    
+    .card-content {
+        height: 140px; /* Slightly smaller fixed height */
+    }
+}
+
+/* Switch to single column on all mobile devices */
+@media (max-width: 600px) {
+    .experts-grid {
+        grid-template-columns: 1fr; /* Single column */
+        max-width: 400px; /* Limit width for single column */
+    }
+    
+    .expert-card {
+        margin-bottom: 15px;
+        height: auto; /* Auto height on mobile */
+    }
+    
+    /* Keep the same card layout on mobile */
+    .card-content {
+        height: 130px; /* Fixed height for mobile */
+    }
+    
+    .profile-image {
+        flex: 0 0 40%; /* Keep same proportions */
+    }
+    
+    .profile-info {
+        flex: 0 0 60%; /* Keep same proportions */
+    }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+    .experts-section {
+        padding: 20px 10px;
+    }
+    
+    .expert-card h3 {
+        font-size: 1em;
+    }
+    
+    .expert-card p {
+        font-size: 0.8em;
+    }
+    
+    .whatsapp-button {
+        font-size: 0.85em;
+        padding: 6px 8px;
+    }
+}
+
+/* --- E-book & Mini Consultancy Section --- */
+.extra-help-section {
+    padding: 40px 20px;
+    background-color: var(--white-color);
+}
+
+.extra-help-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--dark-grey);
+}
+
+.help-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.help-option {
+    background-color: var(--light-grey);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.help-option h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.help-option h3 i {
+    margin-right: 8px;
+}
+
+.help-option p {
+    margin-bottom: 15px;
+}
+
+.help-option .cta-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.help-option .whatsapp-consult-button {
+    background-color: var(--whatsapp-green);
+    color: var(--white-color);
+}
+
+.help-option .cta-button:hover {
+    background-color: #008f7a; /* Darker turquoise */
+}
+.help-option .whatsapp-consult-button:hover {
+     background-color: #1EBE54; /* Darker green */
+}
+
+/* --- Testimonials Section --- */
+.testimonials-section {
+    padding: 40px 20px;
+    background-color: var(--light-grey);
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    background-color: var(--white-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-left: 5px solid var(--secondary-color);
+    display: inline-block; /* Adjust width as needed */
+    max-width: 80%;
+    text-align: left;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.testimonial span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-grey);
+    color: var(--white-color);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer .seo-text {
+    font-size: 0.8em;
+    color: #ccc;
+    margin: 15px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer p:last-child {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+/* --- Sticky WhatsApp Button --- */
+.sticky-whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--whatsapp-green);
+    color: var(--white-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure it's above other elements */
+    transition: transform 0.3s ease;
+}
+
+.sticky-whatsapp-button:hover {
+    transform: scale(1.1);
+    background-color: #1EBE54; /* Darker green */
+}
+
+/* --- Privacy Policy Styles --- */
+.privacy-hero {
+    min-height: 40vh; /* Shorter hero for privacy page */
+}
+
+.privacy-content {
+    padding: 40px 20px;
+    background-color: var(--white-color);
+}
+
+.privacy-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.privacy-content h2 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 2em;
+}
+
+.last-updated {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.policy-section {
+    margin-bottom: 30px;
+}
+
+.policy-section h3 {
+    color: var(--dark-grey);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.policy-section p, .policy-section li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.policy-section ul {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.privacy-content .cta-button {
+    display: inline-block;
+    margin: 30px 0;
+}
