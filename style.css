@@ -385,7 +385,7 @@ body {
 }
 
 /* Switch to single column on all mobile devices */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .experts-grid {
         grid-template-columns: 1fr; /* Single column */
         max-width: 400px; /* Limit width for single column */
