@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover insider tips and local secrets about Marmaris from real locals. Learn about hidden gems, best restaurants, beaches, and authentic experiences in Marmaris, Turkey.">
+    <title>Local Tips for Marmaris — Local Adviser Marmaris</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Additional styles for local tips page */
+        .local-tips-content {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .tips-category {
+            margin-bottom: 40px;
+        }
+        
+        .tips-category h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .tip-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .tip-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .tip-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+        
+        .tip-title {
+            flex-grow: 1;
+        }
+        
+        .tip-title h4 {
+            margin: 0;
+            color: var(--dark-grey);
+            font-size: 1.2em;
+        }
+        
+        .tip-author {
+            color: #777;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        .tip-content {
+            line-height: 1.6;
+        }
+        
+        .tip-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 15px 0;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        
+        .tip-tags {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tip-tag {
+            background-color: #e0f7fa;
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            display: inline-block;
+        }
+        
+        .category-nav {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .category-link {
+            padding: 8px 15px;
+            border-radius: 20px;
+            background-color: #e0f7fa;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .category-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .category-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .category-link {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Hero Section -->
+    <header class="hero-section about-hero">
+        <div class="hero-content">
+            <div class="logo">Local Adviser Marmaris</div>
+            <h1>Local Tips for Marmaris</h1>
+            <p>Insider secrets and recommendations from our Marmaris experts</p>
+        </div>
+    </header>
+
+    <!-- Local Tips Content -->
+    <section class="local-tips-content">
+        <div class="container">
+            <h2>Discover Marmaris Like a Local</h2>
+            
+            <!-- Category Navigation -->
+            <div class="category-nav">
+                <a href="#food-drinks" class="category-link">Food & Drinks</a>
+                <a href="#beaches" class="category-link">Beaches</a>
+                <a href="#activities" class="category-link">Activities</a>
+                <a href="#hidden-gems" class="category-link">Hidden Gems</a>
+                <a href="#practical-info" class="category-link">Practical Info</a>
+            </div>
+            
+            <!-- Food & Drinks Category -->
+            <div id="food-drinks" class="tips-category">
+                <h3><i class="fas fa-utensils"></i> Food & Drinks</h3>
+                
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="tip-title">
+                            <h4>Best Traditional Turkish Breakfast Spots</h4>
+                            <p class="tip-author">By Burcu, Local Food Expert</p>
+                        </div>
+                    </div>
+                    <div class="tip-content">
+                        <p>For an authentic Turkish breakfast experience, skip the hotel buffet and head to "Deniz Kapısı" in the İçmeler district. They serve a traditional spread with over 20 items including fresh village eggs, homemade jams, local honey, and the creamiest butter you've ever tasted. Go early (before 9 AM) on weekends to avoid the local crowds.</p>
+                        <p>Another hidden gem is "Arzum Fırın" in Beldibi district - it's where locals go for the best gözleme (Turkish savory crepes). Their spinach and cheese gözleme paired with a glass of fresh ayran is the perfect breakfast combination.</p>
+                        <div class="tip-tags">
+                            <span class="tip-tag">Breakfast</span>
+                            <span class="tip-tag">Traditional</span>
+                            <span class="tip-tag">Local Favorite</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <div class="tip-title">
+                            <h4>Seafood Restaurants Worth the Splurge</h4>
+                            <p class="tip-author">By Burcu, Local Food Expert</p>
+                        </div>
+                    </div>
+                    <div class="tip-content">
+                        <p>While the marina restaurants are beautiful, they're often overpriced and cater to tourists. For the freshest seafood at reasonable prices, visit "Turgut Reis Restaurant" in Armutalan district.</p>
+                        <p>This family-owned spot is popular among locals, not only for its freshness and fair pricing, but also because it’s alcohol-free — which helps keep the prices more affordable compared to seaside venues.
+
+                            Don’t miss their signature grilled sea bass — perfectly cooked and full of flavor. And if you’re a salad lover, their crisp, freshly prepared salads are the perfect side. Clean, friendly, and straightforward, TurgutReis offers an honest seafood experience that’s hard to find in tourist-heavy areas.</p>
+                        <div class="tip-tags">
+                            <span class="tip-tag">Seafood</span>
+                            <span class="tip-tag">Dinner</span>
+                            <span class="tip-tag">Fresh Catch</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="tip-title">
+                            <h4>Modern Meyhane Experience at Fita</h4>
+                            <p class="tip-author">By Burcu, Local Food Expert</p>
+                        </div>
+                    </div>
+                    <div class="tip-content">
+                        <p>Nestled in the heart of Tepe Mahallesi, Fita is a cozy meyhane that brings a modern twist to traditional Turkish meze. The portions are generous, and the ingredients are always fresh. Try their signature "Atom" or the smoked eggplant salad — both pack a flavorful punch.</p>
+                        <p>Fita is alcohol-serving, but still calm and family-friendly. The outdoor seating under bougainvillea vines makes it ideal for warm summer evenings. Prices are reasonable considering the quality.</p>
+                        <p>If you want an authentic yet slightly modernized meyhane experience without the marina crowd, this is your spot.</p>
+                        <div class="tip-tags">
+                            <span class="tip-tag">Meyhane</span>
+                            <span class="tip-tag">Dinner</span>
+                            <span class="tip-tag">Local Cuisine</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Beaches Category -->
+            <div id="beaches" class="tips-category">
+                <h3><i class="fas fa-umbrella-beach"></i> Beaches</h3>
+                
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="tip-title">
+                            <h4>Escape the Crowds: Secret Beach Spots</h4>
+                            <p class="tip-author">By Defne, Municipality Employee</p>
+                        </div>
+                    </div>
+                    <div class="tip-content">
+                        <p>While Marmaris and İçmeler beaches are beautiful, they tend to get overcrowded during the high season. Luckily, there are a few hidden gems that only locals know about — perfect for those seeking peace, nature, and clear waters.</p>
+                        <p>One such spot is Kumlubük Beach. To get there, hop on a dolmuş (minibus) to Turunç village, then enjoy a scenic 20-minute walk east along the coastal path. You'll be rewarded with a pristine stretch of beach, crystal-clear waters, and far fewer tourists. It’s one of the best hidden beaches near Marmaris — ideal for a quiet day under the sun.</p>
+                        <p>For an even more secluded experience, consider hiring a boat taxi from Marmaris marina to Paradise Island (Cennet Adası). The small beach on the northern side of the island often remains empty, even in peak summer. It's also a top snorkeling spot in Marmaris, thanks to its rocky coastline and marine life.</p>
+                        <p>Whether you’re looking for a peaceful swim or a snorkeling adventure, these local hideaways offer a refreshing alternative to the usual beach crowds.
+                        <div class="tip-tags">
+                            <span class="tip-tag">Beaches</span>
+                            <span class="tip-tag">Swimming</span>
+                            <span class="tip-tag">Off the Beaten Path</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <div class="tip-title">
+                            <h4>Sığ Limanı: Selimiye's Hidden Beach Paradise</h4>
+                            <p class="tip-author">By Defne, Municipality Employee</p>
+                        </div>
+                    </div>
+                    <div class="tip-content">
+                        <p>Selimiye is already a peaceful alternative to the busy heart of Marmaris, but if you walk just a bit further, you'll find a hidden gem locals call Sığ Limanı (Shallow Harbor).</p>
+                        <p>Located at the edge of the village, this quiet bay is perfect for those seeking stillness and crystal-clear water. As the name suggests, the sea here is shallow and calm, making it great for children or just floating peacefully under the sun.</p>
+                        <p>There are no loud beach clubs or flashy deckchairs — just nature, a few anchored boats, and the sound of cicadas. Bring your towel, maybe a book, and enjoy the beauty of untouched Aegean simplicity.</p>
+                        <p>You can reach it with a short walk from the main village square. Best visited early in the morning or before sunset for magical light and complete peace.</p>
+                        <div class="tip-tags">
+                            <span class="tip-tag">Beaches</span>
+                            <span class="tip-tag">Hidden Gem</span>
+                            <span class="tip-tag">Peaceful</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Activities Category -->
+            <div id="activities" class="tips-category">
+                <h3><i class="fas fa-hiking"></i> Activities</h3>
+                
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <div class="tip-title">
+                            <h4>Boat Tours: How to Choose the Right One</h4>
+                            <p class="tip-author">By Hasan, Local Business Expert</p>
+                        </div>
+                    </div>
+                    <div class="tip-content">
+                        <p>Don't book boat tours from the first vendor you see on the promenade - they often charge double what locals pay. Instead, walk to the marina early in the morning and speak directly with the captains. Ask to see their boat before booking and negotiate the price - you should pay no more than 250-300 TL per person for a full-day tour including lunch.</p>
+                        <p>For the best experience, choose smaller boats (max 20 people) rather than the large party boats. "Captain Mehmet's Blue Cruise" offers an authentic experience with stops at secluded bays that the bigger boats can't access.</p>
+                        <div class="tip-tags">
+                            <span class="tip-tag">Boat Tours</span>
+                            <span class="tip-tag">Day Trips</span>
+                            <span class="tip-tag">Money-Saving</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <div class="tip-title">
+                            <h4>Fun Activities for Kids in Marmaris</h4>
+                            <p class="tip-author">By Kaan, Local Kid Explorer</p>
+                        </div>
+                    </div>
+                    <div class="tip-content">
+                        <p>The best water park is definitely Atlantis - it's not as big as some others, but the lines are shorter and they have special areas for younger kids. Go on weekdays before noon to avoid crowds.</p>
+                        <p>My favorite place is the Marmaris Honey House (Bal Evi) where you can see real bees making honey behind glass, and taste many different kinds of honey. They also have a small playground and ice cream!</p>
+                        <p>For rainy days, visit the Toy Museum near the castle. It's small but has cool old toys and sometimes they let kids play with some of them.</p>
+                        <div class="tip-tags">
+                            <span class="tip-tag">Kids</span>
+                            <span class="tip-tag">Family</span>
+                            <span class="tip-tag">Entertainment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hidden Gems Category -->
+            <div id="hidden-gems" class="tips-category">
+                <h3><i class="fas fa-gem"></i> Hidden Gems</h3>
+                
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="tip-title">
+                            <h4>The Forgotten Ancient City of Amos</h4>
+                            <p class="tip-author">By Durmus, History Expert</p>
+                        </div>
+                    </div>
+                    <div class="tip-content">
+                        <p>While everyone visits Marmaris Castle, few tourists know about the ancient city of Amos, just 15 minutes from Marmaris in Turunç direction. This small Hellenistic settlement has a well-preserved theater overlooking the sea, ancient city walls, and temple ruins dating back to 200 BC.</p>
+                        <p>There's no entrance fee, and you'll likely have the place to yourself. Visit in the late afternoon for spectacular sunset views over the bay. Bring water and wear good shoes as the path is uneven.</p>
+                        <div class="tip-tags">
+                            <span class="tip-tag">History</span>
+                            <span class="tip-tag">Ruins</span>
+                            <span class="tip-tag">Views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practical Info Category -->
+            <div id="practical-info" class="tips-category">
+                <h3><i class="fas fa-info-circle"></i> Practical Info</h3>
+                
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <div class="tip-title">
+                            <h4>Getting Around Marmaris Like a Local</h4>
+                            <p class="tip-author">By Defne, Municipality Employee</p>
+                        </div>
+                    </div>
+                    <div class="tip-content">
+                        <p>Forget expensive taxis - use the dolmuş (shared minibuses) like locals do. They run every 5-10 minutes along the main routes and cost only 15-20 TL per ride regardless of distance. Look for the blue minibuses with destinations displayed on the front window.</p>
+                        <p>To use them, simply stand at any point along their route and wave your hand when you see one approaching. When you want to get off, just say "İnecek var" (I want to get off) to the driver.</p>
+                        <p>For the most up-to-date routes and schedules, download the "Marmaris Ulaşım" app - it has an English option and shows real-time locations of all dolmuş vehicles.</p>
+                        <div class="tip-tags">
+                            <span class="tip-tag">Transportation</span>
+                            <span class="tip-tag">Budget</span>
+                            <span class="tip-tag">Local Transport</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="tip-title">
+                            <h4>Vehicle Trouble in Marmaris? Here's What to Do</h4>
+                            <p class="tip-author">By Turgut, Mechanic</p>
+                        </div>
+                    </div>
+                    <div class="tip-content">
+                        <p>If you're renting a scooter or car and encounter problems, don't panic. For minor issues with rental vehicles, call the rental company first - they're required to provide assistance.</p>
+                        <p>For more serious problems or if you own the vehicle, avoid the tourist-area mechanics who often overcharge. Instead, head to the "Sanayi Sitesi" (industrial zone) near the bus station where local mechanics offer fair prices.</p>
+                        <p>My recommended garage is "Önder Oto" - they speak basic English and won't overcharge tourists.</p>
+                        <div class="tip-tags">
+                            <span class="tip-tag">Car Rental</span>
+                            <span class="tip-tag">Scooter</span>
+                            <span class="tip-tag">Emergency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="back-link" style="margin-top: 30px; text-align: center;">
+                <a href="index.html" class="cta-button"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="reviews.html">Reviews</a> | <a href="local-tips.html">Local Tips</a> | <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <p>&copy; 2025 Local Adviser Marmaris. Made with ❤️ in Marmaris.</p>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="#" class="sticky-whatsapp-button whatsapp-general-button" title="Need help? Ask a local now!">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
