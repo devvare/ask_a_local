@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover real-life problems solved by Local Adviser Marmaris. From transportation issues to emergency situations, see how our local experts help tourists in Marmaris, Turkey.">
+    <title>Çözdüğümüz Problemler — Local Adviser Marmaris</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Additional styles for solved problems page */
+        .solved-problems-content {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .problem-category {
+            margin-bottom: 40px;
+        }
+        
+        .problem-category h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .problem-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .problem-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .problem-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+        
+        .problem-title {
+            flex-grow: 1;
+        }
+        
+        .problem-title h4 {
+            margin: 0;
+            color: var(--dark-grey);
+            font-size: 1.2em;
+        }
+        
+        .problem-advisor {
+            color: #777;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        .problem-content {
+            line-height: 1.6;
+        }
+        
+        .problem-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 15px 0;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        
+        .problem-tags {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .problem-tag {
+            background-color: #e0f7fa;
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            display: inline-block;
+        }
+        
+        .category-nav {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .category-link {
+            padding: 8px 15px;
+            border-radius: 20px;
+            background-color: #e0f7fa;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .category-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .problem-solution {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .problem-solution h5 {
+            color: #2e7d32;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .cta-container {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #e0f7fa;
+            border-radius: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .category-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .category-link {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        /* Home Button Style */
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .home-button:hover {
+            transform: scale(1.1);
+            background-color: #007f7f;
+        }
+        
+        .home-button i {
+            font-size: 1.5em;
+        }
+        
+        @media (max-width: 768px) {
+            .home-button {
+                width: 40px;
+                height: 40px;
+                top: 15px;
+                left: 15px;
+            }
+            
+            .home-button i {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Button -->
+    <a href="index.html" class="home-button" title="Back to Home">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <!-- Header / Hero Section -->
+    <header class="hero-section about-hero">
+        <div class="hero-content">
+            <div class="logo">Local Adviser Marmaris</div>
+            <h1>Problems We Solved</h1>
+            <p>Real people, real problems, real solutions</p>
+        </div>
+    </header>
+
+    <!-- Solved Problems Content -->
+    <section class="solved-problems-content">
+        <div class="container">
+            <h2>Real Problems Solved by Our Local Advisers</h2>
+            <p>Discover how our local advisers solved various problems faced by tourists in Marmaris and surrounding areas. Each story demonstrates the real value of our 1-to-1 consultancy service.</p>
+            
+            <!-- Category Navigation -->
+            <div class="category-nav">
+                <a href="#travel" class="category-link">Travel & Transportation</a>
+                <a href="#emergency" class="category-link">Emergency Situations</a>
+                <a href="#activities" class="category-link">Activities</a>
+                <a href="#local-experience" class="category-link">Local Experiences</a>
+            </div>
+            
+            <!-- Travel & Transportation Category -->
+            <div id="travel" class="problem-category">
+                <h3><i class="fas fa-route"></i> Travel & Transportation Problems</h3>
+                
+                <div class="problem-card">
+                    <div class="problem-header">
+                        <div class="problem-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="problem-title">
+                            <h4>Trip to Datça and Knidos</h4>
+                            <p class="problem-advisor">Solved by: Defne, Municipality Employee</p>
+                        </div>
+                    </div>
+                    <div class="problem-content">
+                        <p>A British couple wanting to travel from Marmaris to Datça couldn't find the bus schedules. They were stressed because they wanted to take this trip during their last days of vacation, and the information they found online wasn't up to date.</p>
+                        
+                        <img src="images/solved-problems/datca-knidos-trip.webp" alt="Datça and Knidos Trip" class="problem-image">
+                        
+                        <div class="problem-solution">
+                            <h5><i class="fas fa-check-circle"></i> How We Solved It</h5>
+                            <p>Our local adviser Defne shared not only the correct bus schedules but also the best route to reach the ancient city of Knidos and the optimal visiting hours. The couple had lunch at a local restaurant recommended by Defne and discovered a secluded beach with amazing views. She also suggested an alternative route for the return journey - allowing the couple to see both Datça and Knidos in a single day.</p>
+                        </div>
+                        
+                        <div class="problem-tags">
+                            <span class="problem-tag">Transportation</span>
+                            <span class="problem-tag">Ancient City</span>
+                            <span class="problem-tag">Day Trip</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-header">
+                        <div class="problem-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <div class="problem-title">
+                            <h4>Trip to Muğla and Stratonikeia</h4>
+                            <p class="problem-advisor">Solved by: Durmuş, Retired Teacher</p>
+                        </div>
+                    </div>
+                    <div class="problem-content">
+                        <p>A Dutch family wanted to visit the ancient city of Stratonikeia in Muğla, but there wasn't enough information in guidebooks. They didn't know how to get there, when was the best time to visit, and which sections were worth seeing.</p>
+                        
+                        <img src="images/solved-problems/mugla-stratonikeia-trip.webp" alt="Stratonikeia Ancient City" class="problem-image">
+                        
+                        <div class="problem-solution">
+                            <h5><i class="fas fa-check-circle"></i> How We Solved It</h5>
+                            <p>Our local adviser Durmuş provided them not only with transportation information but also shared the lesser-known sections of the city, the best photo spots, and recommended an authentic village restaurant nearby. The family discovered a historic bath ruin that tourists normally don't see. Durmuş enriched their experience by providing detailed information about the region's history and recommended the best places to shop in the Muğla bazaar.</p>
+                        </div>
+                        
+                        <div class="problem-tags">
+                            <span class="problem-tag">History</span>
+                            <span class="problem-tag">Cultural Tour</span>
+                            <span class="problem-tag">Local Cuisine</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-header">
+                        <div class="problem-icon">
+                            <i class="fas fa-plane-arrival"></i>
+                        </div>
+                        <div class="problem-title">
+                            <h4>Airport Pickup Problem</h4>
+                            <p class="problem-advisor">Solved by: Turgut, Mechanic</p>
+                        </div>
+                    </div>
+                    <div class="problem-content">
+                        <p>A Canadian family landed at Dalaman Airport late at night, and their pre-arranged transfer service didn't show up. They were in panic because they had small children with them and didn't know how to get to Marmaris.</p>
+                        
+                        <img src="images/solved-problems/airport-pickup.webp" alt="Airport Transfer" class="problem-image">
+                        
+                        <div class="problem-solution">
+                            <h5><i class="fas fa-check-circle"></i> How We Solved It</h5>
+                            <p>Turgut immediately found a reliable transfer company, communicated with the driver, and ensured the family reached their hotel in Marmaris safely. And at a price below the normal rate! He also explained the family's situation to the driver, who suggested making a stop for the children during the journey. The family escaped a stressful situation and had a great start to their vacation.</p>
+                        </div>
+                        
+                        <div class="problem-tags">
+                            <span class="problem-tag">Airport Transfer</span>
+                            <span class="problem-tag">Emergency</span>
+                            <span class="problem-tag">Family Travel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Emergency Situations Category -->
+            <div id="emergency" class="problem-category">
+                <h3><i class="fas fa-exclamation-triangle"></i> Emergency Situations</h3>
+                
+                <div class="problem-card">
+                    <div class="problem-header">
+                        <div class="problem-icon">
+                            <i class="fas fa-ship"></i>
+                        </div>
+                        <div class="problem-title">
+                            <h4>Missed the Shuttle After a Boat Tour</h4>
+                            <p class="problem-advisor">Solved by: Hasan, Accountant</p>
+                        </div>
+                    </div>
+                    <div class="problem-content">
+                        <p>A German couple missed the last shuttle to their hotel after returning from a 12 Islands boat tour. It was late at night, and they didn't know how to get back. Moreover, they didn't speak Turkish and were having trouble communicating with taxi drivers.</p>
+                        
+                        <img src="images/solved-problems/boat-tour-shuttle.webp" alt="Boat Tour" class="problem-image">
+                        
+                        <div class="problem-solution">
+                            <h5><i class="fas fa-check-circle"></i> How We Solved It</h5>
+                            <p>Hasan immediately stepped in, arranged a reliable taxi service, and ensured the couple reached their hotel at a reasonable price. He also communicated with the taxi driver, eliminating any language barrier. The couple sent their location to Hasan via WhatsApp, allowing him to direct the taxi driver to the right place. As a result, the couple was able to return safely to their hotel late at night.</p>
+                        </div>
+                        
+                        <div class="problem-tags">
+                            <span class="problem-tag">Transportation</span>
+                            <span class="problem-tag">Language Barrier</span>
+                            <span class="problem-tag">Night Transport</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Activities Category -->
+            <div id="activities" class="problem-category">
+                <h3><i class="fas fa-hiking"></i> Activities</h3>
+                
+                <div class="problem-card">
+                    <div class="problem-header">
+                        <div class="problem-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="problem-title">
+                            <h4>Trip to an Unknown National Park and Adventure Park</h4>
+                            <p class="problem-advisor">Solved by: Kaan, Local Kid Explorer</p>
+                        </div>
+                    </div>
+                    <div class="problem-content">
+                        <p>A Spanish family wanted to spend time in nature with their children. They were looking for a place that was fun for kids and immersed in nature, which they couldn't find in tourist guides.</p>
+                        
+                        <img src="images/solved-problems/marmaris-national-park.webp" alt="Marmaris National Park" class="problem-image">
+                        
+                        <div class="problem-solution">
+                            <h5><i class="fas fa-check-circle"></i> How We Solved It</h5>
+                            <p>Our local adviser Kaan recommended special routes in Marmaris National Park that most tourists don't know about, as well as a nearby adventure park. He also contacted the staff at the park entrance to arrange for the family to join a guided nature walk. During the walk, the family had the opportunity to learn about endemic plants and wildlife. The children experienced an unforgettable day trying zipline and climbing activities at the adventure park.</p>
+                        </div>
+                        
+                        <div class="problem-tags">
+                            <span class="problem-tag">Nature</span>
+                            <span class="problem-tag">Family Activity</span>
+                            <span class="problem-tag">Adventure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Local Experiences Category -->
+            <div id="local-experience" class="problem-category">
+                <h3><i class="fas fa-map-pin"></i> Local Experiences</h3>
+                
+                <div class="problem-card">
+                    <div class="problem-header">
+                        <div class="problem-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="problem-title">
+                            <h4>Trip to Nimera Cave</h4>
+                            <p class="problem-advisor">Solved by: Defne, Municipality Employee</p>
+                        </div>
+                    </div>
+                    <div class="problem-content">
+                        <p>A French traveler wanted to visit Nimera Cave but didn't know how to get there using public transportation. The information found online was contradictory, and the traveler wasn't sure if the cave was open.</p>
+                        
+                        <img src="images/solved-problems/nimera-cave-trip.webp" alt="Nimera Cave" class="problem-image">
+                        
+                        <div class="problem-solution">
+                            <h5><i class="fas fa-check-circle"></i> How We Solved It</h5>
+                            <p>Our local adviser Defne provided not only transportation information but also shared the most impressive sections of the cave, the best times to visit, and other nearby attractions. Following Defne's suggestion, the traveler had the opportunity to meet a local family in the village near the cave. Defne made the experience more meaningful by sharing the legends and history of the cave. Additionally, after learning that the traveler enjoyed photography, she shared the best photo spots.</p>
+                        </div>
+                        
+                        <div class="problem-tags">
+                            <span class="problem-tag">Natural Beauty</span>
+                            <span class="problem-tag">Cultural Experience</span>
+                            <span class="problem-tag">Photography</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-container" style="background: linear-gradient(135deg, #e0f7fa, #b2ebf2); padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 style="font-size: 1.8em; color: #00838f;">Having a Similar Problem?</h3>
+                <p style="font-size: 1.1em; margin-bottom: 20px;">Need help in Marmaris and surrounding areas? Our local advisers are ready to provide personalized solutions for you!</p>
+                <a href="index.html#experts-section" class="cta-button" style="margin-bottom: 25px; display: inline-block;">Meet Our Local Advisers</a>
+                <p style="margin: 20px 0; font-size: 1.2em; font-weight: bold; color: #00838f;">For more comprehensive assistance:</p>
+                <a href="#" class="cta-button whatsapp-consult-button" style="background-color: #25D366; color: white; font-size: 1.2em; padding: 15px 25px; display: block; max-width: 300px; margin: 0 auto; box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3); transform: scale(1); transition: transform 0.3s ease;"><i class="fab fa-whatsapp" style="font-size: 1.4em; margin-right: 10px;"></i> Get 1-on-1 Consultation</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="reviews.html">Reviews</a> | <a href="local-tips.html">Local Tips</a> | <a href="solved-problems.html">Problems We Solved</a> | <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <p>&copy; 2025 Local Adviser Marmaris. Made with ❤️ in Marmaris.</p>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="#" class="sticky-whatsapp-button whatsapp-general-button" title="Yardıma mı ihtiyacın var? Hemen bir yerel danışmana sor!">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
